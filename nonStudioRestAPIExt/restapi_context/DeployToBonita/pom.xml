@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+        <groupId>com.bonitasoft.rest.context_parent</groupId>
+        <artifactId>FullContextAccess</artifactId>
+        <version>1.0</version>
+    </parent>
+	
+    <groupId>com.commoninf.rest.deploy</groupId>
+    <artifactId>DeployToBonita</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    
+    <name>Deploy REST API to Bonita</name>
+    <description>Deploy REST API to Bonita</description>
+    
+    <properties>
+    </properties>
+
+    <dependencies>
+    </dependencies>
+
+    <build>
+        <plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>my-exec</id>
+						<phase>exec</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<inherited>false</inherited>
+					</execution>
+				</executions>
+				<configuration>
+					<skip>false</skip>
+					<executable>java</executable>
+					<arguments>
+						<argument>-jar</argument>
+						<argument>DeployBonitaResources.jar</argument>
+						<argument>-cfg</argument>
+						<argument>dbr_config.json</argument>
+						<argument>-r</argument>
+						<argument>\"Rest Context\"</argument>
+					</arguments>
+					<workingDirectory>${project.basedir}\..\..\utils\</workingDirectory>
+				</configuration>
+				</plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bonitasoft.rest.context_parent</groupId>
+    <artifactId>FullContextAccess</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Full REST API context project</name>
+
+    <modules>
+        <module>RestContextAccessor</module>
+        <module>BonitaEvent-1.0</module>
+        <module>restapi_context-master</module>
+		<module>DeployToBonita</module>
+    </modules>
+    
+    <build>
+    	<plugins>
+    		<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+        	    <artifactId>exec-maven-plugin</artifactId>
+        	    <version>1.6.0</version>
+        	    <configuration>
+        	    	<skip>true</skip>
+        	    	<executable>java</executable>
+        	    </configuration>
+        	</plugin>
+        </plugins>
+    </build>
+</project>

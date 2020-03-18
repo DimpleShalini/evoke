@@ -1,0 +1,30 @@
+[ 
+	{
+		"name":"Rest Context",
+		"file":"..\\restapi_context\\restapi_context-master\\target\\ContextAccess-3.0.zip",
+		"type":"RESTApi",
+		"auth": {
+			"name":"cvw_admin",
+			"pwd":"Welcome1"
+		},
+	"base_engine_url": "http://localhost:8080/bonita"
+	}, {
+		"name":"External Database REST API",
+		"file":"..\\extDbRestAPI\\target\\extDbRestAPI-1.0.0-SNAPSHOT.zip",
+		"type":"RESTApi",
+		"auth": {
+			"name":"cvw_admin",
+			"pwd":"Welcome1"
+		},
+	"base_engine_url": "http://localhost:8080/bonita"
+	}, {
+		"name":"Tracker Customer Database REST API",
+		"file":"..\\Tracker_CustDbAPIParent\\Tracker_CustDbAPI\\target\\Tracker_CustDbAPI-1.0.0-SNAPSHOT.zip",
+		"type":"RESTApi",
+		"auth": {
+			"name":"cvw_admin",
+			"pwd":"Welcome1"
+		},
+	"base_engine_url": "http://localhost:8080/bonita"
+	}
+]
